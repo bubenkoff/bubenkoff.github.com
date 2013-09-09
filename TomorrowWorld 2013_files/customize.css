@@ -1,0 +1,8 @@
+/* custom css definition for css_id = 2 */
+div#wrapper {
+	width:100%;
+}
+
+div#content div#footer {
+	width: 100%;
+}
