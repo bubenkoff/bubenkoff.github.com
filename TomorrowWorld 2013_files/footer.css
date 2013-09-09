@@ -1,0 +1,186 @@
+/*   Footer   */
+
+div#wrapper form {
+    margin: 0;
+}
+
+div#content-wrapper, div#form-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div#wrapper.iframe.non-android div#content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    bottom: 29px;
+}
+
+div#wrapper.iframe.non-android.seating div#content {
+    position: static;
+}
+
+div#wrapper.iframe.android .jspContainer,
+div#wrapper.iframe.android .jspPane {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div.jspVerticalBar div {
+    padding: 0 !important;
+}
+
+div.jspVerticalBar {
+    position: absolute !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div#wrapper.seating.iframe.android .jspContainer,
+div#wrapper.seating.iframe.android .jspPane {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div#content div#footer {
+    background-repeat:repeat-x;
+    background-position:top left;
+    border-top:3px solid;
+    height:29px !important;
+    overflow:hidden;
+    padding: 0 !important;
+    margin:0 auto;
+}
+
+div#wrapper div#content div#footer-wrapper {
+    position: static;
+    left: 0;
+    right: 0;
+    padding: 0 !important;
+    margin: 0 auto;
+}
+
+div#wrapper.iframe.non-android.seating div#content div#footer-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+div#wrapper.iframe.non-android.seating div#content #stepSwitchContainer {
+    padding-right: 15px;
+}
+
+
+div#wrapper.iframe div#content div#footer-wrapper {
+    position: fixed;
+    bottom: 0;
+}
+
+div#wrapper.iframe.android div#content div#footer-wrapper {
+    position: static !important;
+}
+
+div#footer div.countries {
+    left: 0;
+    padding: 0;
+    height:20px;
+    margin-left:10px;
+    width:250px;
+    position: absolute;
+    background: none;
+}
+
+
+div#footer div.countries form#language_form {
+    position: absolute;
+    display: inline;
+    left:70px;
+    top:4px;
+    padding:0;
+}
+
+div#footer div.countries div#language_select input,
+div#footer div.countries form#language_form select,
+div#footer div.countries form#currency_form select {
+    display: inline;
+}
+
+div#footer div.countries form#currency_form {
+    position: absolute;
+    display: inline;
+    left:170px;
+    top:4px;
+    padding:0;
+}
+
+div#fancybox-content form#currency_form,
+div#fancybox-content form#language_form  {
+    position: block;
+}
+
+div#fancybox-content input[type="submit"] {
+    display: none;
+}
+
+div#fancybox-content {
+    color: black;
+}
+
+div#footer div.countries a.logo {
+    background-repeat:no-repeat;
+    background-position:top left;
+    cursor:pointer;
+    height:29px;
+    width:60px;
+}
+
+div#footer div#stepSwitchContainer {
+    width: auto;
+    right: 0;
+    position: absolute;
+    overflow: visible;
+    padding: 0;
+}
+
+div#footer ul.stepSwitch {
+    float: right;
+}
+
+div#footer ul.stepSwitch li {
+    margin:-1px;
+    display: inline;
+}
+
+div#footer ul.stepSwitch .submit {
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:1.1em;
+    height:31px;
+    line-height:31px;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    font-family: "Lucida Sans Unicode","Lucida Sans Regular","Lucida Sans Unicode",Arial,sans-serif;
+}
+
+div#footer ul.stepSwitch .submit:hover,
+div#footer ul.stepSwitch .submithover {
+    background-repeat:repeat-x;
+    background-position:top left;
+}
+
+.hidden{
+    height: 1px !important;
+    width: 1px !important;
+    position: absolute !important;
+    z-index: -100 !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-image: none !important;
+}
+
+

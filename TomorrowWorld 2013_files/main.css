@@ -1,0 +1,888 @@
+/* Main Stylesheet for Getlogic Registration */
+
+div#ui-datepicker-div {
+    z-index: 9999;
+}
+
+html {
+    height: 100%;
+}
+body {
+    font:12px "Lucida Sans Unicode", "Lucida Sans Regular", "Lucida Sans Unicode", Arial, sans-serif;
+    margin:0;
+    padding:0;
+    line-height:14px;
+    height: 100%;
+}
+
+ul.errorlist {
+    list-style: none;
+    color: red;
+    margin: 3px;
+    padding: 0;
+}
+
+
+input[type="text"], input[type="password"],
+select {
+    font:1em "Lucida Sans Unicode", "Lucida Sans Regular", "Lucida Sans Unicode", Arial, sans-serif;
+    line-height:1em;
+    border:1px solid;
+}
+
+input.text,
+input.datefield {
+    border:1px solid;
+    height:18px;
+    line-height:18px;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+a img {
+    border:none;
+}
+
+.negindent {
+    /*   For text-indent in IE   */
+    display:block;
+    font-size:0;
+    line-height:0;
+    text-indent:-9999px;
+}
+
+div#wrapper {
+    margin:0 auto;
+    overflow:hidden;
+    width:450px;
+}
+
+/*   Style for all navigation UL's   */
+
+.menu {
+    list-style-type:none;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+}
+
+.menu li {
+    float:left;
+}
+
+.menu li a {
+    display:block;
+    text-decoration:none;
+}
+
+/*   Menu   */
+
+#menu {
+    background-repeat:repeat-x;
+    background-position:bottom left;
+    border-top:3px solid;
+    height:41px;
+}
+
+#menu li {
+    cursor:default;
+    font-size:1.1em;
+    height:41px;
+    line-height:39px;
+    padding:0 8px;
+}
+
+#menu li.selected {
+    background-repeat:repeat-x;
+    background-position:bottom left;
+}
+
+/*   Content   */
+
+div#wrapper form ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+div#content {
+    position: relative;
+    border: none;
+}
+div#content div {
+    background-repeat:repeat-x;
+    background-position:bottom left;
+    padding:10px 15px 10px 10px;
+    position:relative;
+}
+
+/*   Message block   */
+#extra_messages .message {
+    margin-left: -10px;
+    width: 385px;
+}
+
+div#content div.message {
+    padding:10px 15px 10px 44px;
+}
+div#content div.message .icon {
+    position:absolute;
+    left:10px;
+    top:16px;
+    width:24px;
+    height:24px;
+    margin:0;
+    padding:0;
+}
+div#content div.questionnaire input {
+    margin-left:0;
+    margin-top:10px;
+    width:100%;
+}
+div#content div.questionnaire select {
+    margin-left:0;
+    margin-top:10px;
+    width:100%;
+}
+div#content div.questionnaire textarea {
+    margin-left:0;
+    margin-top:10px;
+    width:100%;
+}
+
+div#content div.questionnaire {
+        padding:22px 44px 10px 44px;
+}
+
+div#content h4.questionnaire {
+    padding-left: 12px;
+}
+
+div#content div.questionnaire.field {
+    background-image: none;
+}
+
+div#content div.questionnaire label {
+        font-weight:bold;
+}
+div#content div.questionnaire ul label {
+        font-weight: normal;
+}
+
+div#content div.questionnaire.question {
+        padding:10px 44px;
+}
+
+div#content div.questionnaire.question p {
+        padding-left: 20px;
+}
+
+div#content div.message.question .icon {
+        top:6px;
+}
+
+div#content div.questionnaire input.single_checkbox {
+        margin-top: 0px;
+}
+
+div#content div.questionnaire .errorlist {
+        margin-top: 5px;
+}
+
+div#content div.message.error {
+        background:#fdd;
+        color:red;
+        border:2px solid red;
+        margin-bottom:10px;
+}
+div#content div.message.error div.icon {
+        background-image:url('/media/img/fo/icon-error.png');
+        top: 7px;
+}
+
+div#content div.notLast {
+    background:none;
+    padding-bottom:none;
+}
+
+div#content h1 {
+    font-size:1em;
+    font-weight:normal;
+    margin:0 0 2px;
+}
+
+div#content h1 span.title {
+    font-weight: bold;
+}
+
+div#content h1 span.subtitle {
+    font-style: italic;
+}
+
+div#content p {
+    margin:0;
+}
+
+/*   Logout block   */
+
+div#content div.logoutsmall {
+    text-align:right;
+    margin-top:10px;
+    display:block;
+}
+
+div#content div.logoutsmall p {
+
+}
+
+div#content div.logoutsmall p a.logout {
+    background-repeat:no-repeat;
+    background-position:0 0;
+    margin: 0 10px;
+    height:15px;
+    padding:0 0 0 18px;
+}
+
+
+/*   Product list for order & workshop page   */
+
+div#content table.products {
+    margin:0 0 8px;
+    padding: 0;
+    width: 100%;
+    position:relative;
+}
+
+div#content table.noheader {
+    border-top: 3px solid;
+}
+
+/*   Product list for order page   */
+
+div#content table.products tr {
+    line-height: 1.8em;
+    background-position:bottom left;
+    background-repeat:repeat-x;
+}
+div#content table.products tr td {
+    padding: 0.5em 0;
+    background-position:bottom left;
+    background-repeat:repeat-x;
+    vertical-align: top;
+}
+
+div#content table.products tr.outline td.title {
+    height: 24px !important;
+}
+div#content table.products th,
+div#content table.products tr.outline td {
+    font-size:0.9em;
+    line-height:25px;
+    background-image: none !important;
+}
+div#content table.products td {
+    padding: 0 5px;
+}
+
+div#content table.products th.product {
+    text-align: left;
+    padding: 0 0 0 44px;
+}
+
+div#content table.products th.price {
+    white-space: nowrap;
+    text-align: right;
+    padding: 0 5px;
+}
+
+div#content table.products th.quantity {
+    width: 73px;
+    text-align: left;
+    padding: 0 15px 0 15px;
+}
+
+div#content table.products td.price, div#content table.products td.amount {
+    text-align: center;
+    white-space: nowrap;
+}
+
+div#content table.products .subtitle {
+    font-style: italic;
+    padding: 0;
+    display: block;
+}
+
+div#content table.products .soldout {
+    font-weight: bold;
+    padding: 0 0 0 39px;
+    display: block;
+}
+
+div#content table.products span.main_name {
+    font-weight: bold;
+}
+
+div#content table.products .subtotal {
+    display: none;
+}
+
+div#content table.products th.amount {
+    margin-left:6px;
+}
+
+
+div#content table.products td.title {
+    height: 48px;
+    padding-left: 44px;
+    background-position: 5px 5px;
+}
+
+div#content table.products select {
+    border:1px solid;
+    font-size:0.9em;
+    width:50px;
+}
+
+div#content table.products .placement_sections select {
+    width: 150px;
+}
+
+/*   Order page   */
+
+/*   Workshop page   */
+
+div#content ul.workshop li p.exp {
+    clear:left;
+    float:none;
+    font-size:0.9em;
+    margin:0 0 10px 60px;
+    padding:0;
+    width:380px;
+}
+
+/*   Login page   */
+
+div#content .buttonRegister {
+    display:inline-block;
+    margin:10px 0 0 0px;
+    padding:5px 10px;
+    text-decoration:none;
+    border: none;
+    cursor: pointer;
+}
+
+div#content div.login {
+    padding-bottom:15px;
+    position:relative;
+}
+
+
+div#content div.login table {
+    margin:10px 0 5px;
+}
+
+table th {
+    vertical-align:top;
+    padding-top:3px;
+    text-align: left;
+}
+
+div#content div.login table input.text {
+    width:146px;
+}
+
+div#content div.login a.forgotPassword {
+    background-repeat:no-repeat;
+    background-position:0px 2px;
+    font-size:0.85em;
+    padding-left:12px;
+    text-decoration:underline;
+}
+
+div#content div.login a.forgotPassword:hover {
+    text-decoration:none;
+}
+
+/*   Register page   */
+
+div#content div.register {
+    padding-bottom: 0px;
+    background: none;
+}
+
+div#content div.register h1 {
+    font-size:1.2em;
+    margin-bottom:7px;
+}
+
+div#content div.register table {
+    margin:8px 0;
+}
+
+div#content div.register table th {
+    font-weight:normal;
+    text-align:left;
+    width:180px;
+}
+
+div#content div.register table input.datefield {
+    width:22px;
+    height:23px;
+    text-indent:-9999px;
+    background: url(/media/img/fo/datepicker.gif) no-repeat;
+    cursor: pointer;
+    padding:0;
+    margin:0;
+    border:none;
+    overflow:hidden;_zoom:1;
+}
+div#content div.register table input.text {
+    width:239px;
+}
+
+div#content div.register table input.date-input {
+    width:64px;
+    margin-right:5px;
+}
+div#content div.register label {
+    line-height:15px;
+}
+
+div#content div.register input.checkbox {
+    height:13px;
+    margin:0px 5px 0 0;
+    overflow:hidden;
+    position:relative;
+    top:2px;
+    *top:-1px;
+    width:13px;
+}
+
+#forgot-password-link a {
+    *zoom: 1;
+}
+
+/*   Orderlist for overview and confirm page   */
+
+div#content div.orderlist table {
+    border-collapse:collapse;
+    margin-bottom:5px;
+    width:450px;
+}
+
+div#content div.orderlist table td {
+    border-bottom:1px solid;
+    padding:3px 5px !important;
+}
+
+div#content div.orderlist table tr.noborder td {
+    border-bottom:none;
+}
+
+div#content div.orderlist table th {
+    font-size:0.9em;
+    font-weight:normal;
+    padding:3px 5px;
+    text-align:left;
+}
+
+div#content div.orderlist table th.col1 {
+    width:225px;
+}
+
+div#content div.orderlist table th.col2,
+div#content div.orderlist table th.col3,
+div#content div.orderlist table th.col4 {
+    width:75px;
+}
+
+div#content div.orderlist table td {
+    padding:4px 0;
+    vertical-align:top;
+}
+
+div#content div.orderlist table td.threecols {
+    padding-right:18px;
+    text-align:right;
+}
+
+div#content table.products td span.date,
+div#content div.orderlist table td span.date {
+    display:block;
+    font-size:0.9em;
+    line-height: 1.2em;
+}
+
+div#content div.orderlist table td span.small {
+    font-size:0.85em;
+}
+
+div#content div.orderlist table td.amount,
+div#content div.orderlist table td.total-amount {
+    padding-right: 20px !important;
+}
+
+div#content div.orderlist table.overview td.black {
+    border-bottomn: 1px solid;
+}
+
+div#content div.orderlist table.overview td.bold {
+    font-weight:bold;
+}
+
+div#content div.orderlist table.overview td.border {
+    border-top:2px solid;
+}
+
+div#content div.orderlist table.overview td.italic {
+    font-style:italic;
+}
+
+div#content div.orderlist table.overview tr.subtotaal td,
+div#content div.orderlist table.overview tr.subtotal td,
+div#content div.orderlist table.overview tr.teilsumme td {
+    font-style:italic;
+    border-top:2px solid;
+}
+
+
+div#content div.asterisk {
+    padding:5px 0;
+}
+
+div#content div.asterisk p {
+    font-size:0.85em;
+    padding-left:3px;
+}
+
+/*   Overview page   */
+
+div#content div.overview {
+    padding:15px 0 0;
+}
+
+div#content div.orderlist h1 {
+    margin:0 0 10px 10px;
+    font-size:1.2em;
+}
+
+div#content div.overview h1 a {
+    background-repeat:no-repeat;
+    background-position:0px 2px;
+    font-size:0.75em;
+    padding-left:12px;
+}
+div#content div.persinfo {
+    padding: 0 10px;
+}
+
+div#content div.persinfo h1 {
+    margin:10px 0 5px;
+    font-size:1.2em;
+}
+
+div#content div.persinfo table {
+    margin-bottom:5px;
+}
+
+div#content div.persinfo table td {
+    padding:0px 7px 0px 0;
+    vertical-align:top;
+    width:218px;
+}
+
+/*   Payment page   */
+
+div#content div.payment {
+    padding:15px 5px 0 5px;
+}
+
+div#content div.payment table {
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+div#content div.payment table td label {
+    display: block;
+    margin: auto;
+    line-height: 20px;
+    padding:5px 0;
+}
+div#content div.payment table td label img {
+    padding: 0px;
+    display: block;
+    width: 40px;
+    height: 30px;
+}
+
+div#content div.payment table td label span.empty {
+    background: url(../../img/fo/empty.gif) repeat;
+    padding: 0px;
+    display: block;
+    width: 40px;
+    height: 30px;
+}
+
+div#content div.payment table td {
+    vertical-align: middle;
+    padding: 2px 0;
+}
+
+input.radio, input.checkbox {
+    border:none;
+}
+
+div#content a.buttonDownload {
+    margin:10px 30px 5px;
+    padding:10px 10px 10px 40px;
+    display:block;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    font-size:1.6em;
+    text-decoration:none;
+    text-align:center;
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+div#content a.buttonDownload:hover {
+    text-decoration:underline;
+}
+
+div#content div.payment table td.iDeal {
+    background:url('../../img/fo/iDeal.png') no-repeat 0px 2px;
+}
+
+div#content div.payment table td.idealExp {
+    font-size:0.9em;
+    padding:0 0 10px 0;
+    width:190px;
+}
+
+div#content div.payment table td.mastercard {
+    background:url('../../img/fo/mastercard.png') no-repeat 0px 2px;
+}
+
+div#content div.payment table td.machtiging {
+    background:url('../../img/fo/machtiging.png') no-repeat 0px 2px;
+    width:190px;
+}
+
+div#content div.payment table td.visa {
+    background:url('../../img/fo/visa.png') no-repeat 0px 2px;
+}
+
+div#content div.total {
+    background:#aaaaaa;
+    border-top:3px solid;
+    color:#ffffff;
+    font-size:1.1em;
+    padding: 3px;
+    padding-right: 20px;
+    position:relative;
+    text-align:right;
+}
+
+div#content div.total p {
+    font-weight:bold;
+}
+
+div#content div.total p.Endtotal {
+    float:left;
+    overflow:hidden;
+    margin-left:60px;
+
+    text-align:left;
+}
+
+div#content div.total span {
+    font-size:0.8em
+}
+
+/* PSPallpago page */
+div#content div.pspallpago {
+    padding:15px 5px 15px 5px;
+}
+div#content div.pspallpago h1 {
+    font-size:1.2em;
+    margin-bottom:7px;
+}
+
+div#content div.pspallpago p {
+    margin-bottom: 15px;
+}
+div#content div.pspallpago table {
+    margin:8px 0;
+}
+
+div#content div.pspallpago table th {
+    font-weight:normal;
+    text-align:left;
+    width:180px;
+}
+
+div#content div.pspallpago table input.datefield {
+    width:22px;
+    height:23px;
+    text-indent:-9999px;
+    background: url(/media/img/fo/datepicker.gif) no-repeat;
+    cursor: pointer;
+    padding:0;
+    margin:0;
+    border:none;
+    overflow:hidden;_zoom:1;
+}
+div#content div.pspallpago table input.text {
+    width:239px;
+}
+
+div#content div.pspallpago table input.date-input {
+    width:64px;
+    margin-right:5px;
+}
+div#content div.pspallpago label {
+    line-height:15px;
+}
+
+div#content div.pspallpago #id_account_verification {
+    width: 50px;
+}
+
+div#content div.pspallpago span.help-text {
+    font-size: 95%;
+}
+
+/*   Confirm page   */
+
+div#content div.confirm {
+    padding:0;
+}
+
+div#content div.message table {
+    margin-top:15px;
+}
+
+div#content div.message th {
+    text-align:left;
+    width:205px;
+}
+
+iframe {
+    background-color: none;
+}
+div.cancel_confirmation {
+    border: 1px solid black; padding: 2px; background-color: #ffffff;
+}
+div.cancel_confirmation .ui-icon-closethick {
+    display: none;
+}
+div.confirmation_dialog {
+    background: white none repeat scroll 0 0;
+    border:0 none;
+    overflow:auto;
+    padding:0.5em 1em;
+    color:#000;
+}
+
+div#content ul.fulfillment table
+{
+    display: block;
+}
+div#content ul.fulfillment table th {
+    width: 100%;
+}
+
+div#content ul.fulfillment label {
+    line-height: 24px;
+}
+
+div#content ul.fulfillment table input.text,
+div#content ul.fulfillment table select
+{
+    width: 230px;
+}
+
+iframe.order_overview {
+    border: none;
+    width: 100%;
+    height: 400px;
+}
+
+input[type="checkbox"] { border: 0; }
+
+.tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #eee;
+    padding: 5px;
+    opacity: 0.85;
+    color: #000;
+}
+
+.social
+{
+    background: none !important;
+    width: 100%;
+    padding-left: 0 !important;
+}
+
+.social div
+{
+    padding: 0 !important;
+    background: none !important;
+    height: 28px;
+}
+
+img.fb-attending-link {
+    padding-bottom: 5px;
+    margin-right: 7px;
+    width: 109px;
+}
+
+.fb_reset {
+    padding: 0 !important;
+    background: none !important;
+}
+
+table.event_info {
+    border-spacing: 0 2px;
+}
+
+/* Query debug table */
+div#query-debug span {
+    cursor: pointer;
+}
+table#debug-query-table {
+    border-spacing: 0
+}
+table#debug-query-table th {
+    border-bottom: 2px solid black;
+}
+table#debug-query-table td {
+    padding: 6px;
+    border-bottom: 2px solid white
+}
+table#debug-query-table tr {
+    border-spacing: 0;
+}
+table#debug-query-table tr.odd {
+    background:#E0E0E0
+}
+table#debug-query-table tr.even {
+    background:#D0D0D0
+}
+
+/* Multicurrency styles */
+#localization {
+  padding: 15px;
+}
+#localization button {
+  width: 44px;
+}
+#localization .ok {
+  padding-left: 50%;
+  margin-left: -22px;
+}
