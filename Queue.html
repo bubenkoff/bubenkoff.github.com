@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)http://queue.paylogic.nl/87438/2113/ -->
+<html lang="nl" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+html, body {
+height: 100%;
+margin: 0;
+}
+</style>
+
+<title>Queue</title>
+<style type="text/css" style="display: none !important;">object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase*="swflash.cab"],object[data*=".swf"],embed[type="application/x-shockwave-flash"],embed[src*=".swf"],object[type="application/x-shockwave-flash"],object[src*=".swf"],object[codetype="application/x-shockwave-flash"],iframe[type="application/x-shockwave-flash"],object[classid$=":166B1BCA-3F9C-11CF-8075-444553540000"],object[codebase*="sw.cab"],object[data*=".dcr"],embed[type="application/x-director"],embed[src*=".dcr"],object[type="application/x-director"],object[src*=".dcr"],object[classid$=":15B782AF-55D8-11D1-B477-006097098764"],object[codebase*="awswaxf.cab"],object[data*=".aam"],embed[type="application/x-authorware-map"],embed[src*=".aam"],object[type="application/x-authorware-map"],object[src*=".aam"],object[classid*="32C73088-76AE-40F7-AC40-81F62CB2C1DA"],object[type="application/ag-plugin"],object[type="application/x-silverlight"],object[type="application/x-silverlight-2"],object[source*=".xaml"],object[sourceelement*="xaml"],embed[type="application/ag-plugin"],embed[source*=".xaml"]{display: none !important;}</style><script type="text/javascript" async="" src="./Queue_files/ga.js"></script><link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"><style type="text/css"></style></head>
+<body style="text-align:center">
+<script type="text/javascript">
+paylogic_event_id = 87438;
+paylogic_point_of_sale_id = 2113;
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="./Queue_files/queue.css">
+<script type="text/javascript" src="./Queue_files/jquery-1.5.2.min.js"></script>
+<div id="paylogic-container">
+<div id="balls" style="display: none;">&nbsp;</div>
+<div id="container" style="display: none;">
+<div id="textcontainer">
+<div id="textcontent">
+<h2>Mainstreet - The Mainshow</h2>
+<p>We are loading the queue, please wait.</p>
+</div>
+<div id="textcontent-fade"></div>
+</div>
+<br><br>
+
+</div>
+<br>
+<div id="footer" style="display: none;">
+<img id="logo" alt="Paylogic" src="./Queue_files/paylogic-logo-white.png">
+<img id="updating_waiting_time" style="float: right; display: none;" src="./Queue_files/spinner.gif">
+</div>
+<iframe src="http://10.0.30.231:8001/?event_id=43&point_of_sale_id=105" name="paylogic-frontoffice" id="paylogic-frontoffice" style="display: inline;"></iframe>
+</div>
+<script type="text/javascript">
+queue_api_domain = 'queue-api.paylogic.nl';
+</script>
+<script type="text/javascript" src="./Queue_files/handlebars.js"></script>
+<script type="text/javascript" src="./Queue_files/queue.js"></script>
+
+<script id="6_postponed-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>The sale has been postponed</h2>
+    {{#if vars.6_postponed_date_time }}
+        <p>The sale has been postponed until <span class="bold">{{ vars.6_postponed_date_time }}</span>. Please join us again on this website for the sale.</p>
+    {{/if}}
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>De verkoop is uitgesteld</h2>
+    {{#if vars.6_postponed_date_time }}
+        <p>De verkoop is uitgesteld tot <span class="bold">{{ vars.6_postponed_date_time }}</span>. U kunt dan weer terecht op deze website voor de verkoop.</p>
+    {{/if}}
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>Der Verkauf wurde verschoben</h2>
+    {{#if vars.6_postponed_date_time }}
+        <p>Der Verkauf wurde verschoben nach <span class="bold">{{ vars.6_postponed_date_time }}</span>. Bitte besuchen Sie uns wieder.</p>
+    {{/if}}
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+<h2>La vente a &eacute;t&eacute; report&eacute;e</h2>
+    {{#if vars.6_postponed_date_time }}
+        <p>La vente a &eacute;t&eacute; report&eacute;e au <span class="bold">{{ vars.6_postponed_date_time }}</span>. Veuillez nous rejoindre &agrave; nouveau sur ce site pour la vente.</p>
+    {{/if}}
+    <br/>
+{{/if}}
+
+<!--[ga_marker]postponed-->
+
+</script>
+
+<script id="5_onhold-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>One moment please</h2>
+    <p>The sale is currenly on hold due to <span class="bold">{{ vars.5_onhold_reason_en }}</span>.
+    {{#if vars.5_onhold_time }}
+        We expect to continue the sale at <span class="bold">{{ vars.5_onhold_time }}</span>.</p>
+    {{/if}}
+    <p><strong>You will keep your position in the queue.</strong></p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>Een ogenblik geduld alsjeblieft</h2>
+    <p>De verkoop is momenteel onderbroken vanwege <span class="bold">{{ vars.5_onhold_reason_nl }}</span>.
+    {{#if vars.5_onhold_time }}
+        We verwachten dat de verkoop wordt hervat om <span class="bold">{{ vars.5_onhold_time }}</span>.</p>
+    {{/if}}
+    <p><strong>U behoudt uw plek in de wachtrij.</strong></p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>Bitte haben Sie einen Moment Geduld</h2>
+    <p>Der Verkauf ist derzeitig unterbrochen wegen <span class="bold">{{ vars.5_onhold_reason_de }}</span>.
+    {{#if vars.5_onhold_time }}
+        Wir erwarten eine Fortsetzung des Verkaufs um <span class="bold">{{ vars.5_onhold_time }}</span>.</p>
+    {{/if}}
+    <p><strong>Sie behalten Ihren Platz in der Warteschleife.</strong></p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+    <h2>Un moment s'il vous pla&icirc;t</h2>
+    <p>La vente est actuellement suspendue en raison de <span class="bold">{{ vars.5_onhold_reason_fr }}</span>.
+    {{#if vars.5_onhold_time }}
+        Nous pr&eacute;voyons de continuer la vente <span class="bold">{{ vars.5_onhold_time }}</span>.</p>
+    {{/if}}
+    <p><strong>Vous conservez votre position dans la file d'attente.</strong></p>
+    <br />
+{{/if}}
+
+<!--[ga_marker]onhold-->
+
+</script>
+
+<script id="4_soldout-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>{{ vars.event_name }} is sold out</h2>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>{{ vars.event_name }} is uitverkocht</h2>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>{{ vars.event_name }} ist ausverkauft</h2>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+    <h2>Le tickets pour {{ vars.event_name }} sont &eacute;puis&eacute;s</h2>
+    <br />
+{{/if}}
+
+<!--[ga_marker]processing-->
+
+</script>
+
+<script id="1_notstarted-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>Ticket sale has not started yet</h2>
+    <p>The {{ vars.event_name }} ticket sale starts at <span class="bold">{{ vars.1_start_date }}</span>.</p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>De kaartverkoop is nog niet begonnen</h2>
+    <p>De kaartverkoop voor {{ vars.event_name }} begint om  <span class="bold">{{ vars.1_start_date }}</span>.</p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>Der Ticketverkauf hat noch nicht begonnen</h2>
+    <p>Der {{ vars.event_name }} Ticketverkauf startet am <span class="bold">{{ vars.1_start_date }}</span>.</p>
+    <br />
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+    <h2>La vente de billets n&acute;a pas encore commenc&eacute;e</h2>
+    <p>La vente de billets pour {{ vars.event_name }} d&eacute;bute le <span class="bold">{{ vars.1_start_date }}</span>.</p>
+    <br />
+{{/if}}
+
+<!--[ga_marker]closed-->
+
+</script>
+
+<script id="2_queue-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>This is an automatic waiting line</h2>
+    {{#unless vars.dont_show_waiting_time }}
+        <p>
+        {{#if vars.2_queue_heating_up }}
+            We are currently calculating the waiting time.
+        {{else}}
+            {{#if_gt sys_vars.wait_minutes compare=60 }}
+                We are sorry to tell you that the waiting time is over an hour.
+            {{ else }}
+                You will be redirected to the ordering page in approximately <span class="bold">{{ sys_vars.wait_minutes }}</span> minutes.
+            {{/if_gt}}
+        {{/if}}
+        </p>
+    {{/unless}}
+    <p>This waiting line keeps track of your position in the queue. When you refresh your page, you will automatically become last in line again, so we strongly advise you not to do so. Opening multiple tabs within a browser does not increase your chances.</p>
+    <p>With this system it's 'first come, first served'. The waiting line gives no guarantee that you can buy a ticket, but it's the fairest way.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>Dit is een automatische wachtrij</h2>
+    {{#unless vars.dont_show_waiting_time }}
+        <p>
+        {{#if vars.2_queue_heating_up }}
+            We berekenen momenteel de wachttijd.
+        {{else}}
+            {{#if_gt sys_vars.wait_minutes compare=60 }}
+                Helaas moeten we je mededelen dat de wachttijd langer dan een uur bedraagt.
+            {{ else }}
+                Je wordt over ongeveer <span class="bold">{{ sys_vars.wait_minutes }}</span> minuten doorgeleid naar de bestelpagina.
+            {{/if_gt}}
+        {{/if}}
+        </p>
+    {{/unless}}
+    <p>Deze wachtrij onthoudt je plek. Indien je de pagina ververst, sta je automatisch weer achteraan in de rij. Wij adviseren je dit dus niet te doen! Het openen van meerdere tabbladen in een browser zal je kans op tickets niet vergroten.</p>
+    <p>De wachtrij werkt volgens het principe "wie het eerst komt, die het eerst maalt". Deze methode geeft je geen garantie tot een kaart, maar iedereen heeft een eerlijke plek in de rij en wordt op die volgorde behandeld.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>Dies ist eine automatische Warteschleife</h2>
+    {{#unless vars.dont_show_waiting_time }}
+        <p>
+        {{#if vars.2_queue_heating_up }}
+            Wir berechnen gerade Ihre derzeitige Wartezeit.
+        {{ else }}
+            {{#if_gt sys_vars.wait_minutes compare=60 }}
+                Wir m&uuml;ssen Ihnen leider mitteilen, dass die Wartezeit &uuml;ber eine Stunde betr&auml;gt.
+            {{ else }}
+                Sie werden in voraussichtlich <span class="bold">{{ sys_vars.wait_minutes }}</span> minuten zur Bestellseite zur&uuml;ckgeleitet.
+            {{/if_gt}}
+        {{/if}}
+        </p>
+    {{/unless}}
+    <p>Diese Warteschleife sichert Ihren Platz in der Reihenfolge der Ticketk&auml;ufer. Sollten Sie die Seite aktualisieren, werden Sie automatisch an das Ende der Reihe gesetzt. Wir weisen Sie daher nachdr&uuml;cklich darauf hin, dies nicht zu tun. </p>
+    <p>Die Warteschleife arbeitet nach dem Prinzip "wer zuerst kommt, malt zuerst". Das System garantiert keine Kaufoption, es stellt lediglich die fairste M&ouml;glichkeit dar.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+    <h2>Ceci est une ligne d&acute;attente automatique</h2>
+    {{#unless vars.dont_show_waiting_time }}
+        <p>
+        {{#if vars.2_queue_heating_up }}
+            Nous calculons actuellement le temps d'attente.
+        {{ else }}
+            {{#if_gt sys_vars.wait_minutes compare=60 }}
+                Nous sommes d&eacute;sol&eacute;s de vous dire que le temps d'attente est de plus d'une heure.
+            {{ else }}
+                Vous allez &ecirc;tre redirig&eacute; vers la page de commande dans environ  <span class="bold">{{ sys_vars.wait_minutes }}</span> minutes.
+            {{/if_gt}}
+        {{/if}}
+        </p>
+    {{/unless}}
+    <p>Cette file d'attente permet de suivre votre position dans la queue. Lorsque vous actualisez votre page, vous deviendrez automatiquement dernier en ligne, pour cela nous vous conseillons vivement de ne pas le faire.</p>
+    <p>Ce syst&egrave;me est bas&eacute; sur 'premier arriv&eacute;, premier servi'. La file d'attente ne donne aucune garantie que vous pouvez acheter un billet, mais c'est la fa&ccedil;on la plus juste.</p>
+    <br/>
+{{/if}}
+
+<!--[ga_marker]queue-->
+
+</script>
+
+<script id="3_processing-template" type="text/x-template">
+{{#if vars.0_queue_text_en }}
+    <h2>Processing orders</h2>
+    <p>The majority of the available tickets have been sold. There might still be a small number of tickets available, depending on the feedback we get from the banks that process the payments. The great interest for this event has an profound impact on the systems of these banks, so we're waiting for them to provide final feedback on all processed transactions.</p>
+    <p>As long as you see this page, you still have a chance to obtain a ticket. In general, these tickets will gradually become available 30 minutes after the sales has started. We kindly ask you to be patient. You will keep your position in the waiting line.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_nl }}
+    <h2>Verwerken van bestellingen</h2>
+    <p>Het merendeel van de kaarten is al verkocht. Er komen misschien nog een aantal kaarten beschikbaar, dit hangt echter af van de bevestiging van de gedane betalingen door de banken. Door de enorme interesse voor dit evenement hebben de systemen van de banken hier wat extra tijd voor nodig. We wachten daarom even tot we zeker weten dat we alle betalingen hebben ontvangen. </p>
+    <p>Zolang je dit scherm ziet, maak je nog een kans om een kaart te kopen. In de regel komen deze omstreeks 30 minuten na de start van de verkoop langzamerhand weer vrij. Om deze kaarten te kunnen bemachtigen vragen we je geduld te bewaren. Je behoudt je plek in de wachtrij.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_de }}
+    <h2>Bestellungen werden bearbeitet</h2>
+    <p>Der Gro&szlig;teil der verf&uuml;gbaren Tickets ist bereits verkauft. M&ouml;glicherweise ist dennoch ein geringes Kontingent an Tickets vorhanden, dies ist jedoch abh&auml;ngig von den R&uuml;ckmeldungen der Banken, die die Zahlungen abwickeln. Das gro&szlig;e Interesse an dieser Veranstaltung hat starke Auswirkungen auf die Systeme der Banken, wir warten derzeit auf finale R&uuml;ckmeldungen bez&uuml;glich der durchgef&uuml;hrten Transaktionen.</p>
+    <p>Solange Sie diese Seite sehen, haben Sie immer noch die Chance ein Ticket zu erhalten. Reservierte Tickets gehen nach 30 Minuten wieder in den Verkauf. Wir bitten Sie um Geduld. Sie behalten Ihren Platz in der Warteschleife.</p>
+    <br/>
+{{/if}}
+
+{{#if vars.0_queue_text_fr }}
+    <h2>Commandes en cours de traitement</h2>
+    <p>La majorit&eacute; des billets disponibles ont &eacute;t&eacute; vendus. Il y a peut-&ecirc;tre encore un petit nombre de billets disponibles, en fonction du retour que nous recevons par les banques qui traitent les paiements. Le grand int&eacute;r&ecirc;t en cet &eacute;v&eacute;nement a un impact profond sur les syst&egrave;mes de ces banques, de sorte que nous attendons d'eux, un retour final sur toutes les transactions trait&eacute;s.</p>
+    <p>Tant que vous voyez cette page, vous avez encore une chance d'obtenir un billet.
+ En g&eacute;n&eacute;ral, ces billets deviendront progressivement disponibles 30 minutes apr&egrave;s le d&eacute;but de la vente. Nous vous prions d'&ecirc;tre patient.
+ Vous conservez votre position dans la file d'attente.</p>
+    <br/>
+{{/if}}
+
+<!--[ga_marker]processing-->
+
+</script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+
+_gaq.push(['paylogic._setAccount', '' ]);
+_gaq.push(['paylogic._trackPageview', 'Mainstreet - The Mainshow/landing' ]);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+
+
+
+<div id="html-validator-loading"><img src="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/images/loading.gif">Validating...</div><div id="html-validator-message"><span id="html-validation-message-close">X</span><div id="html-validator-message-content"></div></div></body></html>

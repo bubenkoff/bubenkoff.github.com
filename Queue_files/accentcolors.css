@@ -1,0 +1,191 @@
+/* Color Stylesheet for Getlogic Registration Template */
+
+
+/*	this stylesheet uses the following colors:
+	
+	background color: 				#fff			(white)
+													(this background is light)
+	
+	base color:						#0079c2			(blue)
+	10% transparent base color:		#1c87c8			(base color with emulated 10% transparency on background-color)
+	
+	text color:						#000			(black)
+	50% transparent text color:		#aaa			(text color with emulated 50% transparency on background-color)
+	text on base color				#fff			(text color as fits best on base color background)
+	
+*/
+
+	body {
+		background-color:#FFFFFF;										/* background color */
+		}
+
+
+/* 	background images ON LIGHT BACKGROUNDS (comment out this section, when using dark backgrounds)
+	*****************************************************************************************/
+
+	div#content div,
+	div#content table.products tr {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-bg.png');		
+		}
+	
+	#menu,
+	#menu li.selected,
+	#footer,
+	div#content ul.stepSwitch a.submit:hover,
+	div#content ul.stepSwitch button.submit:hover,
+	div#content ul.stepSwitch button.submithover,
+	div#content table.products tr:hover {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-bg-em.png');
+		}
+	
+	div#content table.products td.title {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-arrow.png');
+		background-repeat: no-repeat;
+	}
+
+
+	
+	div#content div.shoppingcart .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-shoppingcart.png');
+		}
+	div#content div.change .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-change.png');
+		}
+	div#content div.checked .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-checked.png');
+		}
+	div#content div.question .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-question.png');
+		}
+	div#content div.info .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-info.png');
+		}
+	div#content div.secure .icon {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-lock.png'); margin-top: -10px;
+		}
+		
+	div#content div.logoutsmall a.logout {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-logout.png');
+		}
+	div#content div.overview h1 a,
+	div#content div.login a.forgotPassword {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-link-arrow.png');
+		}
+	div#footer div.countries a.logo {
+		background:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/paylogic-logo-white.png') no-repeat 50% 50%;
+		}
+	div#content a.buttonDownload {
+		background-image:url('https://d33x77etmi70l0.cloudfront.net/media/img/fo/onlight-icon-download.png');
+		}		
+		
+/*** END 'ON LIGHT BACKGROUNDS' *************************************************************/		
+
+
+	/* Fixing double backgrounds */
+	div#content table.products div { background: transparent; }
+	
+/* 	background colors
+	*****************************************************************************************/
+
+	#menu li.selected,
+	
+	div#content table.products th,
+	div#content table.products tr.outline td,
+	div#content .buttonRegister,
+	div#content div.orderlist table th,
+	div#content ul.stepSwitch .submit:hover,
+	div#content a.buttonDownload {
+		background-color:#000000;								/* base color */
+		}
+
+	div#content div.orderlist table th {
+	  color: #000000;
+  }
+
+	div#content .buttonRegister:hover {
+		background-color:#000000; 								/* 10% transparent base color */
+		}
+
+	div#content div.total {
+		background-color: transparent; 								/* 50% transparent text color */
+		}
+		
+
+    div#footer{
+        background-color: #FFFFFF;
+    }
+
+/* 	text colors
+	*****************************************************************************************/
+	
+	body,
+	a,
+	.menu li a,
+	div#content ul.order li p.title span,
+	div#content div.orderlist table td span.date,
+	div#content div.overview h1 a,
+	div#content div.total,
+	div#content div h1 span.subtitle,
+	div#content div.orderlist table.overview td.black,
+	div#content div.soldout,
+	div#content span.text_color {
+		color:#000000;											/* text color */
+		}
+	
+	#menu li.selected,
+	div#content table.products th,
+	div#content table.products tr.outline td,
+	div#content .buttonRegister,
+	div#content div.orderlist table th,
+	div#content ul.stepSwitch .submit:hover,
+	div#content ul.stepSwitch .submithover,
+	div#content a.buttonDownload {
+		color:#FFFFFF;											/* text on base color */
+		}
+	
+	#menu li.inactive {
+		color:#000000; opacity: 0.5;											/* 50% transparent text color */
+		}
+	
+
+	div#content div h1,
+	div#content div.logoutsmall a.logout,
+	div#content table.products td,
+	div#content div.orderlist table,
+	div#content table.event_info td.label, 
+	div#content ul.stepSwitch .submit,
+	div#content div.payment table td div.labelLink a {
+		color:#000000;											/* base color */
+		}
+
+
+/* 	border colors
+	*****************************************************************************************/
+
+	#menu,
+	div#content .products select,
+	div#content div.orderlist table tr,
+	div#content div.total,
+	input.text,
+	input.datefield,
+	div#content div#footer,
+	div#content table.noheader,
+	div#content div.orderlist table.overview td.black,
+	div#content div.orderlist table.overview tr.subtotaal td,
+	div#content div.orderlist table.overview tr.subtotal td,
+	div#content div.orderlist table.overview tr.teilsumme td {
+		border-color:#000000;									/* base color */
+		}
+
+
+	div#content div.login, div#content div.new-user, div#content div.register, div#content div.payment, div#content div#footer, div#content div.download-ticket, {
+		border-bottom-color: #000000;							/* text color */
+		}
+
+    div#content{
+        border-color: #000000;							/* text color */
+		}
+	div#content div.orderlist table.overview tr.subtotaal td, div#content div.orderlist table.overview td.border {
+		border-top-color: #000000;
+		}
+
